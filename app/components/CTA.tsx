@@ -1,5 +1,7 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import EarlyAccessModal from "./EarlyAccessModal";
 
 const COMMITS = [
   { hash: "a3f92c1", msg: "✓ Signed: Summarized Q4 earnings", time: "2m ago",  safe: true },
@@ -11,8 +13,11 @@ const COMMITS = [
 ];
 
 export default function CTA() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="relative overflow-hidden border-t border-black/5">
+      <EarlyAccessModal open={modalOpen} onClose={() => setModalOpen(false)} />
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
         {/* Left — copy + CTA */}
         <motion.div
@@ -38,8 +43,8 @@ export default function CTA() {
             — with a tamper-proof record of exactly what the AI was doing when
             it acted.
           </p>
-          <a
-            href="#"
+          <button
+            onClick={() => setModalOpen(true)}
             className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all hover:scale-105 active:scale-[0.98]"
             style={{
               background: "linear-gradient(135deg, #013A6B, #00CED1)",
@@ -48,7 +53,7 @@ export default function CTA() {
           >
             Get early access
             <span className="text-white/60">→</span>
-          </a>
+          </button>
         </motion.div>
 
         {/* Right — git-style commit log */}

@@ -58,9 +58,9 @@ export default function Navbar() {
         </a>
         <a
           href="#product"
-          className="text-sm font-medium px-5 py-2.5 rounded-full border border-black/10 bg-white/60 backdrop-blur-sm text-black/55 hover:text-black/80 hover:border-black/20 transition-all"
+          className="animated-border text-sm font-semibold px-5 py-2.5 rounded-full text-[#013A6B] hover:text-[#00CED1] transition-colors duration-300"
         >
-          See the product
+          See Demo
         </a>
       </motion.div>
     </motion.nav>
