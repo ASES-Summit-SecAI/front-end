@@ -16,7 +16,7 @@ export default function Navbar() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-3"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center px-8 pt-3"
     >
       <motion.div
         animate={
@@ -29,8 +29,8 @@ export default function Navbar() {
                 boxShadow:
                   "0 1px 2px rgba(0,0,0,0.04), 0 4px 20px rgba(0,0,0,0.06)",
                 borderRadius: "9999px",
-                paddingLeft: "1.25rem",
-                paddingRight: "1.25rem",
+                paddingLeft: "3rem",
+                paddingRight: "3rem",
               }
             : {
                 backgroundColor: "rgba(245,245,247,0)",
@@ -44,7 +44,7 @@ export default function Navbar() {
               }) as Parameters<typeof motion.div>[0]["animate"]
         }
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="flex items-center justify-between w-full max-w-5xl border py-1.5"
+        className="flex items-center justify-between w-full border py-1.5"
       >
         <a href="/" className="flex shrink-0 items-center">
           <img

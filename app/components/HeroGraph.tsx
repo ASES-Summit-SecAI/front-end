@@ -666,7 +666,7 @@ export default function HeroGraph() {
 
   useEffect(() => {
     const delays: Record<Phase, number> = {
-      incoming: 1500, flowing: 750, verifying: 700, result: 1600,
+      incoming: 900, flowing: 500, verifying: 450, result: 1000,
     };
     const t = setTimeout(() => {
       if (phase === "incoming") {
